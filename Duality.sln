@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Duality", "Duality\Duality.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Duality.DesktopGL", "Duality.DesktopGL\Duality.DesktopGL.csproj", "{50E156AA-0EDA-498F-B283-E390812EBDCE}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Duality\Duality.projitems*{50e156aa-0eda-498f-b283-e390812ebdce}*SharedItemsImports = 5
+		Duality\Duality.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F65AB4A-B424-488E-84A3-A19D6E84A479}
+	EndGlobalSection
+EndGlobal
