@@ -1,0 +1,5 @@
+bin/
+obj/
+.vs/
+Duality.DesktopGL/bin/
+Duality.DesktopGL/obj/
