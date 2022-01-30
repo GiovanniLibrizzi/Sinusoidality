@@ -7,9 +7,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Duality", "Duality\Duality.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Duality.DesktopGL", "Duality.DesktopGL\Duality.DesktopGL.csproj", "{50E156AA-0EDA-498F-B283-E390812EBDCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duality.Android", "Duality.Android\Duality.Android.csproj", "{8D518DF3-AB3A-4178-9DF2-C640C461225B}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Duality\Duality.projitems*{50e156aa-0eda-498f-b283-e390812ebdce}*SharedItemsImports = 5
+		Duality\Duality.projitems*{8d518df3-ab3a-4178-9df2-c640c461225b}*SharedItemsImports = 4
 		Duality\Duality.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +24,12 @@ Global
 		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50E156AA-0EDA-498F-B283-E390812EBDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D518DF3-AB3A-4178-9DF2-C640C461225B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -66,6 +66,23 @@ namespace Duality.Game {
             foreach (Buttons button in btn.buttons) {
                 if (keyDown(button)) return true;
             }
+            if (btn.buttons == Reset.buttons) {
+                if (touchDown()) return true;
+            }
+            if (btn.buttons == Up.buttons) {
+                if (touchDown()) {
+                    if (GetTouchState()[0].Position.Y <= Game1.ScreenHeight / 2) {
+                        return true;
+                    }
+                }
+            }
+            if (btn.buttons == Down.buttons) {
+                if (touchDown()) {
+                    if (GetTouchState()[0].Position.Y > Game1.ScreenHeight / 2) {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
         public static bool keyDown(Keys key) {
@@ -93,9 +110,23 @@ namespace Duality.Game {
                 foreach (Buttons button in btn.buttons) {
                     if (keyPressed(button)) return true;
                 }
-            //if (btn.buttons == Jump.buttons) {
-            //    if (touchPressed()) return true;
-            //}
+            if (btn.buttons == Reset.buttons) {
+                if (touchPressed()) return true;
+            }
+            if (btn.buttons == Up.buttons) {
+                if (touchPressed()) {
+                    if (GetTouchState()[0].Position.Y <= Game1.ScreenHeight / 2) {
+                        return true;
+                    }
+                }
+            }
+            if (btn.buttons == Down.buttons) {
+                if (touchPressed()) {
+                    if (GetTouchState()[0].Position.Y > Game1.ScreenHeight / 2) {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
         public static bool keyPressed(Keys key) {

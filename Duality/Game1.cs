@@ -19,15 +19,16 @@ namespace Duality {
         int backbufferWidth, backbufferHeight;
         private Matrix globalTransformation;
 
+#if !ANDROID
         public static int wScr = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
         public static int hScr = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-
+#endif
 
         Rectangle CANVAS = new Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
         public static int GridSize = 16;
-        public static int ScreenWidth = SCREEN_WIDTH * 3;
-        public static int ScreenHeight = SCREEN_HEIGHT * 3;
+        public static int ScreenWidth = SCREEN_WIDTH * 5;
+        public static int ScreenHeight = SCREEN_HEIGHT * 5;
         private RenderTarget2D renderTarget;
 
         bool noAudio = false;
@@ -130,6 +131,11 @@ namespace Duality {
 
         protected override void LoadContent() {
             renderTarget = new RenderTarget2D(GraphicsDevice, CANVAS.Width, CANVAS.Height);
+
+#if ANDROID
+            int ScreenWidth = GraphicsDevice.Viewport.Width;
+            int ScreenHeight = GraphicsDevice.Viewport.Height;
+#endif
 
             graphics.PreferredBackBufferWidth = ScreenWidth;
             graphics.PreferredBackBufferHeight = ScreenHeight;
@@ -242,8 +248,9 @@ namespace Duality {
             delta = (float)gameTime.TotalGameTime.TotalSeconds*1000;
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit(); 
+                Exit();
 
+#if !ANDROID
             if (Input.keyPressed(Keys.F)) {
                 if (scaleInc < scale.Length - 1) {
                     scaleInc++;
@@ -258,7 +265,7 @@ namespace Duality {
                     Resolution(wScr, hScr, true);
                 }
             }
-
+#endif
             switch (state) {
                 case GameState.TitleScreen:
                     if (Input.keyPressed(Input.Reset)) {
